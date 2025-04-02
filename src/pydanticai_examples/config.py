@@ -23,6 +23,9 @@ class TodoistConfig(BaseConfig):
     todoist_api_key: str
     todoist_project: str
 
+class LogfireConfig(BaseConfig):
+    logfire_token: str
+
 
 @lru_cache
 def get_qdrant_config():
@@ -36,4 +39,8 @@ def get_openai_config():
 @lru_cache
 def get_todoist_config():
     return TodoistConfig()
+
+@lru_cache
+def get_logfire_config():
+    return LogfireConfig()
 

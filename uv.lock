@@ -1756,6 +1756,7 @@ name = "pydanticai-examples"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "logfire" },
     { name = "pydantic-ai", extra = ["logfire"] },
     { name = "pydantic-settings" },
     { name = "python-dotenv" },
@@ -1770,6 +1771,7 @@ experiment = [
 
 [package.metadata]
 requires-dist = [
+    { name = "logfire", specifier = ">=3.11.0" },
     { name = "pydantic-ai", extras = ["logfire"], specifier = ">=0.0.46" },
     { name = "pydantic-settings", specifier = ">=2.8.1" },
     { name = "python-dotenv", specifier = ">=1.1.0" },
