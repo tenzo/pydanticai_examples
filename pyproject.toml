@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydanticai-examples"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic-ai[logfire]>=0.0.46",
+    "pydantic-settings>=2.8.1",
+    "python-dotenv>=1.1.0",
+    "qdrant-client>=1.13.3",
+    "todoist-api-python>=2.1.7",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src"]
+sources = ["src"]
+packages = ["pydanticai_examples"]
+
+[dependency-groups]
+experiment = [
+    "jupyterlab>=4.3.6",
+]
