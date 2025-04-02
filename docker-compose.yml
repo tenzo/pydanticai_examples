@@ -21,11 +21,3 @@ configs:
   qdrant_config:
     content: |
       log_level: INFO
-
-CONTEXT:
-- [Retrieved Chunk 1]: "RAG combines retrieval with language models..."
-- [Retrieved Chunk 2]: "Vector search uses embeddings to find semantic matches..."
-
-INSTRUCTION: Answer concisely using only the context above.
-
-QUESTION: What is RAG?
